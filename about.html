@@ -17,6 +17,45 @@
         </ul>
     </nav>
     <section>
+        <h2>Tell Us About Yourself</h2>
+        <form method="POST" action="https://webdevbasics.net/scripts/demo.php">
+            <div>
+                <label for="myName">Name:</label>
+                <input type="text" name="myName" id="myName">
+            </div>
+            <div>
+                <label for="myEmail">Email:</label>
+                <input type="email" name="myEmail" id="myEmail">
+            </div>
+            <div>
+                <p>Choose the browsers you use:</p>
+                <input type="checkbox" name="Chrome" id="Chrome" value="Yes">
+                <label for="Chrome">Google Chrome</label>
+                <input type="checkbox" name="Firefox" id="Firefox" value="Yes">
+                <label for="Firefox">Firefox</label>
+                <input type="checkbox" name="Edge" id="Edge" value="Yes">
+                <label for="Edge">Microsoft Edge</label>
+            </div>
+            <div>
+                <p>Would you like to be on our mailing list?</p>
+                <div>
+                    <input type="radio" name="mailingList" id="mailingListYes" value="Yes">
+                    <label for="mailingListYes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" name="mailingList" id="mailingListNo" value="No">
+                    <label for="mailingListNo">No</label>
+                </div>
+            </div>
+            <div>
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" rows="4" cols="40"></textarea>
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+    <section>
         <h2>About This Website</h2>
         <p>This is Justin Cobb's vacation website, created to practice HTML navigation, lists, and tables.</p>
     </section>
