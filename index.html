@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+    <div class="container py-4">
     <header>
         <h1>Our Puma Vacation Website</h1>
     </header>
-    <section>
-        <h2>Navigation</h2>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#" aria-current="page">Home</a></li>
-                <li><a href="./table.html">Table</a></li>
-                <li><a href="./about.html">About</a></li>
-            </ul>
-        </nav>
-    </section>
-    <section>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-4" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Puma Nav</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pumaNav" aria-controls="pumaNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="pumaNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./table.html">Table</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="mb-4">
         <h2>Travel Video</h2>
         <p>A New York City subway arriving, from the zyBooks travel video example.</p>
-        <video width="480" height="270" controls preload="metadata">
+        <video class="mw-100" width="480" height="270" controls preload="metadata">
             <source src="https://resources.zybooks.com/WebProgramming/subway.mp4" type="video/mp4">
             Your browser does not support the video element.
         </video>
     </section>
-    <section>
+    <section class="mb-4">
         <h2>Vacation Chime</h2>
         <p>Play a short original welcome chime.</p>
         <audio controls preload="metadata">
@@ -35,16 +43,17 @@
             Your browser does not support the audio element.
         </audio>
     </section>
-    <section>
+    <section class="mb-4">
         <h2>Vacation Inspiration</h2>
         <p>Explore destinations in Ryan Shirley's <a href="https://www.youtube.com/watch?v=s3G2kLruJJo">Top 100 Places To Visit On Earth</a>.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/s3G2kLruJJo"
+        <iframe class="mw-100" width="560" height="315" src="https://www.youtube.com/embed/s3G2kLruJJo"
             title="Top 100 Places To Visit On Earth by Ryan Shirley"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
-    <footer>
+    <footer class="border-top pt-3 mt-4 text-body-secondary">
         <p>Copyright &copy; 2026 Justin Cobb</p>
     </footer>
+    </div>
 </body>
 </html>

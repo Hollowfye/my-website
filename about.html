@@ -4,63 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+    <div class="container py-4">
     <header>
         <h1>The About Page</h1>
     </header>
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./table.html">Table</a></li>
-            <li><a href="./about.html" aria-current="page">About</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-4" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Puma Nav</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pumaNav" aria-controls="pumaNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="pumaNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./table.html">Table</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="./about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <section>
+    <section class="mb-4">
         <h2>Tell Us About Yourself</h2>
         <form method="POST" action="https://webdevbasics.net/scripts/demo.php">
-            <div>
-                <label for="myName">Name:</label>
-                <input type="text" name="myName" id="myName">
+            <div class="mb-3">
+                <label class="form-label" for="myName">Name:</label>
+                <input class="form-control" type="text" name="myName" id="myName">
             </div>
-            <div>
-                <label for="myEmail">Email:</label>
-                <input type="email" name="myEmail" id="myEmail">
+            <div class="mb-3">
+                <label class="form-label" for="myEmail">Email:</label>
+                <input class="form-control" type="email" name="myEmail" id="myEmail">
             </div>
-            <div>
-                <p>Choose the browsers you use:</p>
-                <input type="checkbox" name="Chrome" id="Chrome" value="Yes">
-                <label for="Chrome">Google Chrome</label>
-                <input type="checkbox" name="Firefox" id="Firefox" value="Yes">
-                <label for="Firefox">Firefox</label>
-                <input type="checkbox" name="Edge" id="Edge" value="Yes">
-                <label for="Edge">Microsoft Edge</label>
-            </div>
-            <div>
-                <p>Would you like to be on our mailing list?</p>
-                <div>
-                    <input type="radio" name="mailingList" id="mailingListYes" value="Yes">
-                    <label for="mailingListYes">Yes</label>
+            <fieldset class="mb-3">
+                <legend class="fs-6">Choose the browsers you use:</legend>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" name="Chrome" id="Chrome" value="Yes">
+                    <label class="form-check-label" for="Chrome">Google Chrome</label>
                 </div>
-                <div>
-                    <input type="radio" name="mailingList" id="mailingListNo" value="No">
-                    <label for="mailingListNo">No</label>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" name="Firefox" id="Firefox" value="Yes">
+                    <label class="form-check-label" for="Firefox">Firefox</label>
                 </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" name="Edge" id="Edge" value="Yes">
+                    <label class="form-check-label" for="Edge">Microsoft Edge</label>
+                </div>
+            </fieldset>
+            <fieldset class="mb-3">
+                <legend class="fs-6">Would you like to be on our mailing list?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mailingList" id="mailingListYes" value="Yes">
+                    <label class="form-check-label" for="mailingListYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mailingList" id="mailingListNo" value="No">
+                    <label class="form-check-label" for="mailingListNo">No</label>
+                </div>
+            </fieldset>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="comments">Comments:</label>
+                <textarea class="form-control" name="comments" id="comments" rows="4" cols="40"></textarea>
             </div>
-            <div>
-                <label for="comments">Comments:</label>
-                <textarea name="comments" id="comments" rows="4" cols="40"></textarea>
-            </div>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <input class="btn btn-primary" type="submit" value="Submit">
+            <input class="btn btn-secondary" type="reset" value="Reset">
         </form>
     </section>
-    <section>
+    <section class="mb-4">
         <h2>About This Website</h2>
         <p>This is Justin Cobb's vacation website, created to practice HTML navigation, lists, and tables.</p>
     </section>
-    <footer>
+    <footer class="border-top pt-3 mt-4 text-body-secondary">
         <p>Copyright &copy; 2026 Justin Cobb</p>
     </footer>
+    </div>
 </body>
 </html>
